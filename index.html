@@ -3,142 +3,464 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ERENAV - Entreprise de Réparation Navale</title>
+  <title>ERENAV — Réparation & Construction Navale · Algérie</title>
+  <meta name="description" content="ERENAV, leader algérien de la réparation et construction navale depuis 1987. Cales sèches, maintenance, chaudronnerie et solutions maritimes complètes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <span class="logo-text">ERE<span class="accent">NAV</span></span>
-        <span class="logo-sub">Réparation Navale</span>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À Propos</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#stats">Chiffres</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+  <!-- LOADER -->
+  <div class="page-loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">ERENAV</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
     </div>
-  </nav>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero" id="accueil">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-pre">Entreprise Publique Économique</p>
-      <h1 class="hero-title">ERENAV</h1>
-      <p class="hero-subtitle">Excellence en Réparation et Construction Navale depuis 1987</p>
-      <div class="hero-buttons">
-        <a href="#services" class="btn btn-primary">Nos Services</a>
-        <a href="#contact" class="btn btn-outline">Nous Contacter</a>
-      </div>
-    </div>
-    <div class="hero-scroll"><span></span></div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats" id="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <i class="fas fa-ship"></i>
-          <span class="stat-number" data-target="500">0</span>
-          <span class="stat-label">Navires Réparés</span>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-users"></i>
-          <span class="stat-number" data-target="1200">0</span>
-          <span class="stat-label">Employés Qualifiés</span>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-calendar-alt"></i>
-          <span class="stat-number" data-target="37">0</span>
-          <span class="stat-label">Années d'Expérience</span>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-anchor"></i>
-          <span class="stat-number" data-target="12">0</span>
-          <span class="stat-label">Cales Sèches</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- À PROPOS -->
-  <section class="about" id="apropos">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">À Propos</span>
-        <h2>Leader de la Réparation Navale en Algérie</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>L'Entreprise de Réparation Navale (ERENAV) est une entreprise publique économique algérienne spécialisée dans la réparation, la maintenance et la construction navale. Fondée en 1987, ERENAV est devenue le principal opérateur dans le secteur maritime algérien.</p>
-          <p>Dotée d'infrastructures modernes et d'équipements de pointe, ERENAV dispose de cales sèches capables d'accueillir des navires de grande taille, de quais d'amarrage, d'ateliers mécaniques spécialisés et d'une main-d'œuvre hautement qualifiée.</p>
-          <ul class="about-list">
-            <li><i class="fas fa-check-circle"></i> Certification ISO 9001</li>
-            <li><i class="fas fa-check-circle"></i> Conformité aux normes SOLAS</li>
-            <li><i class="fas fa-check-circle"></i> Partenariats internationaux</li>
-            <li><i class="fas fa-check-circle"></i> Technologies de pointe</li>
-          </ul>
-        </div>
-        <div class="about-image">
-          <div class="image-placeholder">
-            <i class="fas fa-ship"></i>
-            <p>Port d'Alger - Siège ERENAV</p>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-inner">
+          <div class="header-meta">
+            <a href="tel:+213214230055"><i class="fas fa-phone-alt"></i> +213 21 42 30 55</a>
+            <a href="mailto:contact@erenav.dz"><i class="fas fa-envelope"></i> contact@erenav.dz</a>
+            <span><i class="fas fa-map-marker-alt"></i> Port d'Alger, Algérie</span>
+          </div>
+          <div class="header-lang">
+            <a href="#" class="lang-active">FR</a>
+            <span>|</span>
+            <a href="#">AR</a>
+            <span>|</span>
+            <a href="#">EN</a>
           </div>
         </div>
       </div>
     </div>
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 24 L8 16 L14 20 L18 10 L22 18 L28 14 L32 24 Z" fill="#0057A8" stroke="#0057A8" stroke-width="1" stroke-linejoin="round"/>
+                <rect x="2" y="26" width="32" height="4" rx="2" fill="#0057A8"/>
+                <line x1="18" y1="4" x2="18" y2="10" stroke="#E8A020" stroke-width="2.5"/>
+                <path d="M14 4 L18 2 L22 4" fill="#E8A020"/>
+              </svg>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-main">ERE<em>NAV</em></span>
+              <span class="logo-sub">Réparation Navale</span>
+            </div>
+          </a>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#accueil" class="nav-link">Accueil</a></li>
+            <li><a href="#apropos" class="nav-link">L'Entreprise</a></li>
+            <li class="has-dropdown">
+              <a href="#services" class="nav-link">Activités <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown">
+                <li><a href="#services"><i class="fas fa-tools"></i> Réparation Navale</a></li>
+                <li><a href="#services"><i class="fas fa-cogs"></i> Maintenance Mécanique</a></li>
+                <li><a href="#services"><i class="fas fa-bolt"></i> Électricité Marine</a></li>
+                <li><a href="#services"><i class="fas fa-paint-roller"></i> Anti-Corrosion</a></li>
+                <li><a href="#services"><i class="fas fa-drafting-compass"></i> Construction Navale</a></li>
+                <li><a href="#services"><i class="fas fa-fire-extinguisher"></i> Chaudronnerie</a></li>
+              </ul>
+            </li>
+            <li><a href="#infrastructures" class="nav-link">Infrastructures</a></li>
+            <li><a href="#references" class="nav-link">Références</a></li>
+            <li><a href="#actualites" class="nav-link">Actualités</a></li>
+            <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+          </ul>
+          <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-bg-image"></div>
+      <div class="hero-particles" id="particles"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Entreprise Publique Économique · Fondée en 1987
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">L'Excellence</span>
+          <span class="title-line accent">Maritime</span>
+          <span class="title-line">Algérienne</span>
+        </h1>
+        <p class="hero-desc">Leader national de la réparation et construction navale, ERENAV offre des solutions maritimes complètes avec les plus hautes exigences de qualité et de sécurité.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary btn-lg">
+            <span>Découvrir nos activités</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-ghost btn-lg">
+            <span>Demander un devis</span>
+          </a>
+        </div>
+        <div class="hero-certifs">
+          <div class="certif-item"><i class="fas fa-award"></i> ISO 9001</div>
+          <div class="certif-item"><i class="fas fa-shield-alt"></i> SOLAS</div>
+          <div class="certif-item"><i class="fas fa-globe"></i> Partenariats Internationaux</div>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-stats-card">
+          <div class="hstat">
+            <span class="hstat-num" data-target="500">0</span><span class="hstat-plus">+</span>
+            <span class="hstat-label">Navires réparés</span>
+          </div>
+          <div class="hstat-divider"></div>
+          <div class="hstat">
+            <span class="hstat-num" data-target="1200">0</span><span class="hstat-plus">+</span>
+            <span class="hstat-label">Collaborateurs</span>
+          </div>
+          <div class="hstat-divider"></div>
+          <div class="hstat">
+            <span class="hstat-num" data-target="37">0</span>
+            <span class="hstat-label">Années d'expertise</span>
+          </div>
+          <div class="hstat-divider"></div>
+          <div class="hstat">
+            <span class="hstat-num" data-target="12">0</span>
+            <span class="hstat-label">Cales sèches</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Défiler</span>
+    </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- RIBBON -->
+  <div class="ribbon">
+    <div class="ribbon-track">
+      <div class="ribbon-items">
+        <span><i class="fas fa-ship"></i> Réparation Navale</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-anchor"></i> Cales Sèches</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-industry"></i> Chaudronnerie</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-bolt"></i> Électricité Marine</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-paint-roller"></i> Anti-Corrosion</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-drafting-compass"></i> Construction Navale</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-cogs"></i> Maintenance Mécanique</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-fire"></i> Tuyauterie Industrielle</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-ship"></i> Réparation Navale</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-anchor"></i> Cales Sèches</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-industry"></i> Chaudronnerie</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-bolt"></i> Électricité Marine</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-paint-roller"></i> Anti-Corrosion</span>
+        <span class="sep">·</span>
+        <span><i class="fas fa-drafting-compass"></i> Construction Navale</span>
+        <span class="sep">·</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- L'ENTREPRISE -->
+  <section class="about" id="apropos">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-frame">
+            <div class="about-img-bg"></div>
+            <div class="about-badge-float">
+              <span class="badge-year">1987</span>
+              <span class="badge-label">Année de création</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-eyebrow">L'Entreprise</div>
+          <h2 class="section-title">Leader de la Réparation Navale en Algérie</h2>
+          <div class="section-bar"></div>
+          <p class="about-lead">L'Entreprise de Réparation Navale (ERENAV) est une entreprise publique économique algérienne spécialisée dans la réparation, la maintenance et la construction navale.</p>
+          <p>Fondée en 1987, ERENAV est devenue le principal opérateur du secteur maritime algérien. Dotée d'infrastructures modernes et d'équipements de pointe, elle dispose de cales sèches capables d'accueillir des navires de grande taille, de quais d'amarrage, d'ateliers mécaniques spécialisés et d'une main-d'œuvre hautement qualifiée.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-award"></i></div>
+              <div>
+                <strong>Certification ISO 9001</strong>
+                <p>Système de management qualité reconnu internationalement</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <strong>Conformité SOLAS</strong>
+                <p>Respect strict des conventions de sécurité maritime</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+              <div>
+                <strong>Partenariats Internationaux</strong>
+                <p>Collaboration avec les leaders mondiaux du secteur naval</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-microchip"></i></div>
+              <div>
+                <strong>Technologies de Pointe</strong>
+                <p>Équipements et procédés aux dernières normes industrielles</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary mt-2">
+            <span>En savoir plus</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIFFRES CLÉS -->
+  <section class="metrics">
+    <div class="metrics-bg"></div>
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric">
+          <div class="metric-icon"><i class="fas fa-ship"></i></div>
+          <div class="metric-value"><span class="count" data-target="500">0</span><sup>+</sup></div>
+          <div class="metric-label">Navires réparés</div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon"><i class="fas fa-users"></i></div>
+          <div class="metric-value"><span class="count" data-target="1200">0</span><sup>+</sup></div>
+          <div class="metric-label">Collaborateurs qualifiés</div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon"><i class="fas fa-history"></i></div>
+          <div class="metric-value"><span class="count" data-target="37">0</span></div>
+          <div class="metric-label">Années d'expérience</div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon"><i class="fas fa-anchor"></i></div>
+          <div class="metric-value"><span class="count" data-target="12">0</span></div>
+          <div class="metric-label">Cales sèches</div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon"><i class="fas fa-globe-africa"></i></div>
+          <div class="metric-value"><span class="count" data-target="20">0</span><sup>+</sup></div>
+          <div class="metric-label">Nationalités de clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITÉS -->
   <section class="services" id="services">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Expertise</span>
-        <h2>Nos Services</h2>
-        <div class="divider"></div>
+      <div class="section-header-center">
+        <div class="section-eyebrow">Expertise</div>
+        <h2 class="section-title">Nos Activités</h2>
+        <div class="section-bar center"></div>
+        <p class="section-desc">Des solutions maritimes complètes, du diagnostic à la livraison, avec les plus hautes exigences de qualité.</p>
       </div>
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-tools"></i></div>
-          <h3>Réparation Navale</h3>
-          <p>Réparation complète de navires toutes catégories : coques, structures métalliques, systèmes de propulsion et équipements embarqués.</p>
+        <article class="svc-card">
+          <div class="svc-img svc-img-1"></div>
+          <div class="svc-body">
+            <div class="svc-icon"><i class="fas fa-tools"></i></div>
+            <h3>Réparation Navale</h3>
+            <p>Réparation complète de navires toutes catégories : coques, structures métalliques, systèmes de propulsion et équipements embarqués.</p>
+            <a href="#contact" class="svc-link">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </article>
+        <article class="svc-card">
+          <div class="svc-img svc-img-2"></div>
+          <div class="svc-body">
+            <div class="svc-icon"><i class="fas fa-cogs"></i></div>
+            <h3>Maintenance Mécanique</h3>
+            <p>Entretien et réparation de moteurs marins, pompes, compresseurs, turbines et systèmes hydrauliques.</p>
+            <a href="#contact" class="svc-link">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </article>
+        <article class="svc-card">
+          <div class="svc-img svc-img-3"></div>
+          <div class="svc-body">
+            <div class="svc-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Électricité & Navigation</h3>
+            <p>Installation et maintenance des systèmes électriques, de navigation, de communication et d'automatisation des navires.</p>
+            <a href="#contact" class="svc-link">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </article>
+        <article class="svc-card">
+          <div class="svc-img svc-img-4"></div>
+          <div class="svc-body">
+            <div class="svc-icon"><i class="fas fa-paint-roller"></i></div>
+            <h3>Anti-Corrosion & Peinture</h3>
+            <p>Sablage, grenaillage et application de peintures marines certifiées pour protéger les coques et structures.</p>
+            <a href="#contact" class="svc-link">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </article>
+        <article class="svc-card">
+          <div class="svc-img svc-img-5"></div>
+          <div class="svc-body">
+            <div class="svc-icon"><i class="fas fa-drafting-compass"></i></div>
+            <h3>Construction Navale</h3>
+            <p>Conception et construction de navires, barges, remorqueurs et embarcations spécialisées selon les normes internationales.</p>
+            <a href="#contact" class="svc-link">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </article>
+        <article class="svc-card">
+          <div class="svc-img svc-img-6"></div>
+          <div class="svc-body">
+            <div class="svc-icon"><i class="fas fa-fire"></i></div>
+            <h3>Tuyauterie & Chaudronnerie</h3>
+            <p>Fabrication et réparation de tuyauteries, réservoirs, échangeurs de chaleur et structures en acier inoxydable.</p>
+            <a href="#contact" class="svc-link">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFRASTRUCTURES -->
+  <section class="infra" id="infrastructures">
+    <div class="infra-bg"></div>
+    <div class="container">
+      <div class="section-header-center light">
+        <div class="section-eyebrow light">Capacités</div>
+        <h2 class="section-title">Nos Infrastructures</h2>
+        <div class="section-bar center"></div>
+        <p class="section-desc light">Un outil industriel de premier plan pour répondre aux exigences les plus complexes.</p>
+      </div>
+      <div class="infra-grid">
+        <div class="infra-card">
+          <div class="infra-num">01</div>
+          <i class="fas fa-water"></i>
+          <h3>Cales Sèches</h3>
+          <p>12 cales sèches capables d'accueillir des navires jusqu'à 50 000 tonnes de port en lourd.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-cogs"></i></div>
-          <h3>Maintenance Mécanique</h3>
-          <p>Entretien et réparation de moteurs marins, pompes, compresseurs, turbines et systèmes hydrauliques.</p>
+        <div class="infra-card">
+          <div class="infra-num">02</div>
+          <i class="fas fa-anchor"></i>
+          <h3>Quais d'Amarrage</h3>
+          <p>Plusieurs centaines de mètres linéaires de quais équipés pour l'accostage et l'avitaillement.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-bolt"></i></div>
-          <h3>Électricité & Électronique</h3>
-          <p>Installation et maintenance des systèmes électriques, de navigation, de communication et d'automatisation des navires.</p>
+        <div class="infra-card">
+          <div class="infra-num">03</div>
+          <i class="fas fa-industry"></i>
+          <h3>Ateliers Spécialisés</h3>
+          <p>Ateliers mécaniques, électriques, de chaudronnerie et de menuiserie navale sur plus de 50 000 m².</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
-          <h3>Traitement Anti-Corrosion</h3>
-          <p>Sablage, grenaillage et application de peintures marines certifiées pour protéger les coques et structures.</p>
+        <div class="infra-card">
+          <div class="infra-num">04</div>
+          <i class="fas fa-hard-hat"></i>
+          <h3>Portiques & Grues</h3>
+          <p>Équipements de levage haute capacité : portiques de 250 tonnes et grues mobiles de 100 tonnes.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
-          <h3>Construction Navale</h3>
-          <p>Conception et construction de navires, barges, remorqueurs et embarcations spécialisées selon les normes internationales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉFÉRENCES -->
+  <section class="references" id="references">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-eyebrow">Confiance</div>
+        <h2 class="section-title">Nos Références</h2>
+        <div class="section-bar center"></div>
+        <p class="section-desc">De nombreux armateurs et institutions maritimes nous font confiance pour leurs opérations navales.</p>
+      </div>
+      <div class="ref-grid">
+        <div class="ref-card"><div class="ref-icon"><i class="fas fa-ship"></i></div><span>CNAN Group</span></div>
+        <div class="ref-card"><div class="ref-icon"><i class="fas fa-oil-can"></i></div><span>Sonatrach</span></div>
+        <div class="ref-card"><div class="ref-icon"><i class="fas fa-anchor"></i></div><span>Marine Nationale</span></div>
+        <div class="ref-card"><div class="ref-icon"><i class="fas fa-globe"></i></div><span>Armateurs Internationaux</span></div>
+        <div class="ref-card"><div class="ref-icon"><i class="fas fa-industry"></i></div><span>SNTR Maritime</span></div>
+        <div class="ref-card"><div class="ref-icon"><i class="fas fa-university"></i></div><span>Ministère des Transports</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTUALITÉS -->
+  <section class="news" id="actualites">
+    <div class="container">
+      <div class="news-header">
+        <div>
+          <div class="section-eyebrow">Actualités</div>
+          <h2 class="section-title">Dernières Nouvelles</h2>
+          <div class="section-bar"></div>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-fire-extinguisher"></i></div>
-          <h3>Tuyauterie & Chaudronnerie</h3>
-          <p>Fabrication et réparation de tuyauteries, réservoirs, échangeurs de chaleur et structures en acier inoxydable.</p>
-        </div>
+        <a href="#" class="btn btn-outline-dark">Toutes les actualités <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="news-grid">
+        <article class="news-card news-featured">
+          <div class="news-img"></div>
+          <div class="news-body">
+            <span class="news-cat">Réparation</span>
+            <h3>ERENAV modernise ses cales sèches pour accueillir les grands navires</h3>
+            <p>Dans le cadre de son plan de développement stratégique, ERENAV investit dans la modernisation de ses infrastructures portuaires pour renforcer sa compétitivité.</p>
+            <div class="news-footer">
+              <span class="news-date"><i class="fas fa-calendar"></i> Mars 2026</span>
+              <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-img news-img-sm"></div>
+          <div class="news-body">
+            <span class="news-cat">Certification</span>
+            <h3>Renouvellement de la certification ISO 9001:2015</h3>
+            <div class="news-footer">
+              <span class="news-date"><i class="fas fa-calendar"></i> Février 2026</span>
+              <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-img news-img-sm"></div>
+          <div class="news-body">
+            <span class="news-cat">Formation</span>
+            <h3>Programme de formation continue pour les techniciens navals</h3>
+            <div class="news-footer">
+              <span class="news-date"><i class="fas fa-calendar"></i> Janvier 2026</span>
+              <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-img news-img-sm"></div>
+          <div class="news-body">
+            <span class="news-cat">Partenariat</span>
+            <h3>Signature d'un accord de coopération technique avec un chantier européen</h3>
+            <div class="news-footer">
+              <span class="news-date"><i class="fas fa-calendar"></i> Décembre 2025</span>
+              <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -146,100 +468,159 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Contact</span>
-        <h2>Contactez-Nous</h2>
-        <div class="divider"></div>
-      </div>
       <div class="contact-grid">
         <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <h4>Adresse</h4>
-              <p>Port d'Alger, BP 65, Alger, Algérie</p>
+          <div class="section-eyebrow">Contact</div>
+          <h2 class="section-title">Travaillons Ensemble</h2>
+          <div class="section-bar"></div>
+          <p class="contact-lead">Vous avez un projet maritime ? Notre équipe d'experts est à votre disposition pour étudier vos besoins et vous proposer la meilleure solution.</p>
+          <div class="contact-details">
+            <div class="cdetail">
+              <div class="cdetail-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <strong>Adresse</strong>
+                <p>Port d'Alger, BP 65, Alger, Algérie</p>
+              </div>
+            </div>
+            <div class="cdetail">
+              <div class="cdetail-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <strong>Téléphone</strong>
+                <p>+213 21 42 30 55 / 56</p>
+              </div>
+            </div>
+            <div class="cdetail">
+              <div class="cdetail-icon"><i class="fas fa-fax"></i></div>
+              <div>
+                <strong>Fax</strong>
+                <p>+213 21 42 30 57</p>
+              </div>
+            </div>
+            <div class="cdetail">
+              <div class="cdetail-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <p>contact@erenav.dz</p>
+              </div>
             </div>
           </div>
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <div>
-              <h4>Téléphone</h4>
-              <p>+213 21 42 30 55</p>
-              <p>+213 21 42 30 56</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-fax"></i>
-            <div>
-              <h4>Fax</h4>
-              <p>+213 21 42 30 57</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <h4>Email</h4>
-              <p>contact@erenav.dz</p>
-            </div>
+          <div class="contact-social">
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
-        <form class="contact-form">
-          <div class="form-group">
-            <input type="text" placeholder="Votre Nom" required>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Votre Email" required>
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Sujet">
-          </div>
-          <div class="form-group">
-            <textarea rows="5" placeholder="Votre Message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Envoyer le Message</button>
-        </form>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nom complet *</label>
+                <input type="text" placeholder="Votre nom" required>
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" placeholder="votre@email.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Société</label>
+                <input type="text" placeholder="Votre société">
+              </div>
+              <div class="form-group">
+                <label>Téléphone</label>
+                <input type="tel" placeholder="+213 ...">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Type de service</label>
+              <select>
+                <option value="">Sélectionner un service</option>
+                <option>Réparation Navale</option>
+                <option>Maintenance Mécanique</option>
+                <option>Électricité Marine</option>
+                <option>Anti-Corrosion</option>
+                <option>Construction Navale</option>
+                <option>Chaudronnerie</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message *</label>
+              <textarea rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Envoyer la demande</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <span class="logo-text">ERE<span class="accent">NAV</span></span>
-          <p>Entreprise de Réparation Navale - Leader du secteur maritime algérien depuis 1987.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#apropos">À Propos</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Réparation Navale</a></li>
-            <li><a href="#services">Maintenance</a></li>
-            <li><a href="#services">Construction</a></li>
-            <li><a href="#services">Anti-Corrosion</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact Rapide</h4>
-          <p><i class="fas fa-phone"></i> +213 21 42 30 55</p>
-          <p><i class="fas fa-envelope"></i> contact@erenav.dz</p>
-          <p><i class="fas fa-map-marker-alt"></i> Port d'Alger, Algérie</p>
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="footer-logo">
+              <span class="logo-main">ERE<em>NAV</em></span>
+              <span class="logo-sub">Réparation Navale</span>
+            </a>
+            <p>Leader algérien de la réparation et construction navale. Une expertise reconnue depuis 1987 au service des armateurs nationaux et internationaux.</p>
+            <div class="footer-certs">
+              <span><i class="fas fa-award"></i> ISO 9001</span>
+              <span><i class="fas fa-shield-alt"></i> SOLAS</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>L'Entreprise</h4>
+            <ul>
+              <li><a href="#apropos">À Propos</a></li>
+              <li><a href="#infrastructures">Infrastructures</a></li>
+              <li><a href="#references">Références</a></li>
+              <li><a href="#actualites">Actualités</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Nos Activités</h4>
+            <ul>
+              <li><a href="#services">Réparation Navale</a></li>
+              <li><a href="#services">Maintenance Mécanique</a></li>
+              <li><a href="#services">Construction Navale</a></li>
+              <li><a href="#services">Anti-Corrosion</a></li>
+              <li><a href="#services">Chaudronnerie</a></li>
+              <li><a href="#services">Électricité Marine</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <address>
+              <p><i class="fas fa-map-marker-alt"></i> Port d'Alger, BP 65<br>Alger, Algérie</p>
+              <p><i class="fas fa-phone-alt"></i> +213 21 42 30 55</p>
+              <p><i class="fas fa-envelope"></i> contact@erenav.dz</p>
+            </address>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 ERENAV - Entreprise de Réparation Navale. Tous droits réservés.</p>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 ERENAV — Entreprise de Réparation Navale. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>
